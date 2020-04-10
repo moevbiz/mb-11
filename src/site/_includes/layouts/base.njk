@@ -6,8 +6,12 @@
     {% set css %}
       {% include "css/main.css" %}
     {% endset %}
+    {% set reset %}
+      {% include "css/buttonreset.css" %}
+    {% endset %}
     <style>
       {{ css | cssmin | safe }}
+      {{ reset | cssmin | safe }}
     </style>
     <title>{{ title }}</title>
   </head>
@@ -16,7 +20,18 @@
       {# {% include "header.njk" %} #}
       {{ content | safe }}
     </div>
+    <br>
+    <footer class="footer">
+      <a class="c" href="https://www.moev.biz">moev.biz</a> 
+      <span class="d e">Web design and development</span>
+      <span class="d e"><a href="tel:+4367761641821">+4367761641821</a></span>
+      <span class="d e"><a href="mailto:xo@moev.biz">xo@moev.biz</a></span>
+      <span class="d e"><a href="https://github.com/moevbiz">github</a></span>
+    </footer>
   </body>
+  <script>
+    {% include "js/main.js" %}
+  </script>
 </html>
 
 

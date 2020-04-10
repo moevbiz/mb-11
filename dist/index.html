@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    <style>
+      body,html{height:100%;padding:0;margin:0}body{display:flex;flex-direction:column;font-size:16px;line-height:2em;background-color:#fff;padding:6px 12px;box-sizing:border-box}.container{flex:1 0 auto}.footer{flex-shrink:0}a.c{display:inline;margin-right:5px;white-space:nowrap;background:#ff0}span.d{margin-right:20px}.d::before{display:inline-block;position:relative;top:-.2em;content:" ";height:1px;width:50px;margin-right:5px;background:#000}.d.e{margin-right:3px}.filter.selected{background:red}.el,.el.visible{display:inline}.hidden{display:none}span.y{margin-right:23px;font-size:.8em;font-family:Arial,sans-serif}body.filtered .y{display:none}
+      button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button}button{display:inline-block;border:1px solid;margin-left:-1px;margin-top:-1px;text-decoration:none;font-size:1rem;cursor:pointer;text-align:center;-webkit-appearance:none;-moz-appearance:none}
+    </style>
+    <title>moev.biz</title>
+  </head>
+  <body >
+    <div class="container">
+      
+      
+<div class="filters">
+  <button class="filter selected" data-filter-value="All">All</button><button class="filter" data-filter-value="Portfolio">Portfolio</button><button class="filter" data-filter-value="Exhibition Space">Exhibition Space</button><button class="filter" data-filter-value="App">App</button><button class="filter" data-filter-value="Organization">Organization</button><button class="filter" data-filter-value="Blog">Blog</button><button class="filter" data-filter-value="Personal">Personal</button><button class="filter" data-filter-value="Gallery">Gallery</button><button class="filter" data-filter-value="Project">Project</button></div>
+
+<br>
+  <div class="el" data-type="Exhibition Space">
+    
+      <span class="y">2020</span>
+    
+    <a class="c" href="https://cherishhhh.ch" >
+      Cherish</a>
+    <span class="d"> 
+      Website for a project space in Geneva
+    </span>
+  </div>
+  
+  <div class="el" data-type="App">
+    
+    <a class="c" href="https://github.com/moevbiz/linkfish" >
+      Linkfish</a>
+    <span class="d"> 
+      A Google Chrome extension to help organise bookmarks more consciously
+    </span>
+  </div>
+  
+  <div class="el" data-type="Organization">
+    
+      <span class="y">2019</span>
+    
+    <a class="c" href="https://kulturherbst.riotfestival.at" >
+      Kulturherbst Neubau</a>
+    <span class="d"> 
+      Interactive map for a festival program
+    </span>
+  </div>
+  
+  <div class="el" data-type="Blog">
+    
+    <a class="c" href="https://hugozorn.com" >
+      Hugo Zorn</a>
+    <span class="d"> 
+      Website for an open structured platform for contemporary art
+    </span>
+  </div>
+  
+  <div class="el" data-type="Personal">
+    
+    <a class="c" href="https://brunomokross.de" >
+      Bruno Mokross</a>
+    <span class="d"> 
+      A personal website
+    </span>
+  </div>
+  
+  <div class="el" data-type="Gallery">
+    
+    <a class="c" href="https://lilyrobert.com" >
+      Lily Robert</a>
+    <span class="d"> 
+      Website for a gallery in Paris
+    </span>
+  </div>
+  
+  <div class="el" data-type="Exhibition Space">
+    
+    <a class="c" href="https://weloveschool.org" >
+      school</a>
+    <span class="d"> 
+      Website for a project space in Vienna
+    </span>
+  </div>
+  
+  <div class="el" data-type="Project">
+    
+      <span class="y">2018</span>
+    
+    <a class="c" href="http://gazebo.rf.gd" >
+      Gazebo</a>
+    <span class="d"> 
+      Website for an exhibition series in public pavilions
+    </span>
+  </div>
+  
+  <div class="el" data-type="Portfolio">
+    
+    <a class="c" href="https://edinzenun.at" >
+      Edin Zenun</a>
+    <span class="d"> 
+      Artist portfolio
+    </span>
+  </div>
+  
+  <div class="el" data-type="Organization">
+    
+      <span class="y">2017</span>
+    
+    <a class="c" href="https://independentspaceindex.at" >
+      Independent Space Index</a>
+    <span class="d"> 
+      Website for a networking initiative between independent art spaces in Vienna
+    </span>
+  </div>
+  
+  <div class="el" data-type="Exhibition Space">
+    
+    <a class="c" href="http://kevinspace.at" >
+      Kevin Space</a>
+    <span class="d"> 
+      Website for a project space in Vienna
+    </span>
+  </div>
+  
+  <div class="el" data-type="Exhibition Space">
+    
+    <a class="c" href="https://pinavienna.eu" >
+      Pina</a>
+    <span class="d"> 
+      Website for a project space in Vienna
+    </span>
+  </div>
+  
+    </div>
+    <br>
+    <footer class="footer">
+      <a class="c" href="https://www.moev.biz">moev.biz</a> 
+      <span class="d e">Web design and development</span>
+      <span class="d e"><a href="tel:+4367761641821">+4367761641821</a></span>
+      <span class="d e"><a href="mailto:xo@moev.biz">xo@moev.biz</a></span>
+      <span class="d e"><a href="https://github.com/moevbiz">github</a></span>
+    </footer>
+  </body>
+  <script>
+    let filters = document.querySelectorAll('.filter')
+let elements = document.querySelectorAll('.el')
+
+function toggle(input) {
+    if (input != "All") {
+        document.body.classList.add('filtered')
+    } else {
+        document.body.classList.remove('filtered')
+    }
+    filters.forEach((filter) => {
+        if (filter.dataset.filterValue == input) {
+            filter.classList.add('selected')
+        } else {
+            filter.classList.remove('selected')
+        }
+    })
+    elements.forEach((element) => {
+        if (input === "All") {
+            show(element)
+        } else if (element.dataset.type == input) {
+            show(element)
+        } else {
+            hide(element)
+        }
+    })
+}
+
+function show(el) {
+    el.classList.add('visible')
+    el.classList.remove('hidden')
+}
+
+function hide(el) {
+    el.classList.add('hidden')
+    el.classList.remove('visible')
+}
+
+filters.forEach((filter) => {
+    filter.addEventListener('click', function(e) {
+        toggle(filter.dataset.filterValue)
+    })
+})
+  </script>
+</html>
+
+
+

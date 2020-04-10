@@ -8,10 +8,12 @@ module.exports = function(config) {
   config.addLayoutAlias('default', 'layouts/base.njk');
 
   // minify the html output
-  config.addTransform("htmlmin", require("./src/utils/minify-html.js"));
+  // config.addTransform("htmlmin", require("./src/utils/minify-html.js"));
 
   // use a filter for simple css minification
-  config.addFilter("cssmin", require("./src/utils/minify-css.js"))
+  config.addFilter("cssmin", require("./src/utils/minify-css.js"));
+
+  config.setPugOptions({debug:true})
 
 
   // make the seed target act like prod
@@ -22,7 +24,7 @@ module.exports = function(config) {
       output: "dist",
       data: `_data/${env}`
     },
-    templateFormats : ["njk", "md"],
+    templateFormats : ["njk"],
     htmlTemplateEngine : "njk",
     markdownTemplateEngine : "njk"
   };

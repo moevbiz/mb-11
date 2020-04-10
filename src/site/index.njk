@@ -1,0 +1,28 @@
+---
+title: moev.biz
+layout: default
+---
+
+<div class="filters">
+  <button class="filter selected" data-filter-value="All">All</button>
+{%- for type in sheet.types -%}
+  <button class="filter" data-filter-value="{{ type }}">{{ type }}</button>
+{%- endfor -%}
+</div>
+
+<br>
+
+{%- for item in sheet.content -%}
+  {% if item.visible === "TRUE" %}
+  <div class="el" data-type="{{ item.type }}">
+    {% if item.yearDisplay == true %}
+      <span class="y">{{ item.year }}</span>
+    {% endif %}
+    <a class="c" href="{{ item.link }}" >
+      {{ item.name }}</a>
+    <span class="d"> 
+      {{ item.long }}
+    </span>
+  </div>
+  {% endif %}
+{%- endfor -%}
