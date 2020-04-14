@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
 html, body {
   height: 100%;
   padding: 0;
@@ -22,14 +24,24 @@ body {
   flex-shrink: 0;
 }
 
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+a:hover {
+  background: yellow;
+}
+
 a.c {
   display: inline;
   margin-right: 5px;
   white-space: nowrap;
-  /* padding: 7px; */
-  /* border: 1px solid; */
-  background: yellow;
+  font-family: "VT323";
+  font-size: 1.4em;
 }
+
+
 span.d {
   margin-right: 20px;
 }
@@ -45,6 +57,10 @@ span.d {
 }
 .d.e {
   margin-right: 3px;
+}
+
+.filter {
+  font-size: .8em;
 }
 
 .filter.selected {
