@@ -4,6 +4,7 @@ html, body {
   height: 100%;
   padding: 0;
   margin: 0;
+  overflow-x: hidden;
 }
 
 body {
@@ -38,7 +39,7 @@ a.c {
   margin-right: 5px;
   white-space: nowrap;
   font-family: "VT323";
-  font-size: 1.4em;
+  font-size: 1.35em;
 }
 
 
