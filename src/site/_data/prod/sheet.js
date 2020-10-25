@@ -17,6 +17,7 @@ module.exports = () => {
       .then(response => {
         // massage the data from the Google Sheets API into
         // a shape that will more convenient for us in our SSG.
+        console.log(response.data.feed);
         var data = {
           "content": [],
           "types": [],
@@ -39,7 +40,7 @@ module.exports = () => {
             "name": item.gsx$name.$t,
             "link": item.gsx$url.$t,
             "type": item.gsx$type.$t,
-            "tech": item.gsx$tech.$t,
+            "tech": item.gsx$tech.$t.split(', '),
             "long": item.gsx$long.$t,
             "mark": item.gsx$highlight.$t,
             "visible": item.gsx$visible.$t,
