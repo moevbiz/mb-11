@@ -14,12 +14,12 @@ layout: default
 
 {%- for item in sheet.content -%}
   {% if item.visible === "TRUE" %}
-  <div class="el" data-type="{{ item.type }}">
+  <div class="el{% if item.mark === "TRUE" %} mark {% endif %}" data-type="{{ item.type }}">
     {% if item.yearDisplay == true %}
       <span class="y">{{ item.year }}</span>
     {% endif %}
     <a class="c" href="{{ item.link }}" target="_blank" noopener noreferrer>
-      {{ item.name }}</a>
+      {{ item.link }}</a>
     <span class="d"> 
       {{ item.long }}
     </span>

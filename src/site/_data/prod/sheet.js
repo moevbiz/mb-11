@@ -41,6 +41,7 @@ module.exports = () => {
             "type": item.gsx$type.$t,
             "tech": item.gsx$tech.$t,
             "long": item.gsx$long.$t,
+            "mark": item.gsx$highlight.$t,
             "visible": item.gsx$visible.$t,
             "yearDisplay": yearDisplay(item)
           })
@@ -48,6 +49,8 @@ module.exports = () => {
             data.types.push(item.gsx$type.$t)
           }
         });
+
+        data.types.sort()
 
         // stash the data locally for developing without
         // needing to hit the API each time.

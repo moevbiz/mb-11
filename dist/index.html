@@ -6,7 +6,7 @@
     
     
     <style>
-      @import url(https://fonts.googleapis.com/css2?family=VT323&display=swap);body,html{height:100%;padding:0;margin:0;overflow-x:hidden}body{display:flex;flex-direction:column;font-size:16px;line-height:2em;background-color:#fff;padding:6px 12px;box-sizing:border-box}.container{flex:1 0 auto}.footer{flex-shrink:0}a{color:#000;text-decoration:none}a:hover{background:#ff0}a.c{display:inline;margin-right:5px;white-space:nowrap;font-family:VT323;font-size:1.35em}span.d{margin-right:20px}.d::before{display:inline-block;position:relative;top:-.2em;content:" ";height:1px;width:50px;margin-right:5px;background:#000}.d.e{margin-right:3px}.filter{font-size:.8em}.filter.selected{background:red}.el,.el.visible{display:inline}.hidden{display:none}span.y{margin-right:23px;font-size:.8em;font-family:Arial,sans-serif}body.filtered .y{display:none}
+      @import url(https://fonts.googleapis.com/css2?family=VT323&display=swap);body,html{height:100%;padding:0;margin:0;overflow-x:hidden}body{display:flex;flex-direction:column;font-size:16px;line-height:1.2em;background-color:#fff;padding:6px 12px;box-sizing:border-box;max-width:800px}.container{flex:1 0 auto}.footer{flex-shrink:0}a{color:#000;text-decoration:none}a:hover{background:#ff0!important}a.c{display:inline;word-break:break-all;text-decoration:underline}span.d:before{content:" – "}span.d::after{content:" ";background:radial-gradient(rgba(0,0,0,0),rgba(0,0,0,1));height:1em;width:1em;border-radius:50%;display:inline-block;position:relative;transform:scale(.7);vertical-align:middle}.d.e{margin-right:3px}.filter{font-size:.7em;font-family:sans-serif;text-transform:uppercase;padding:3px 5px;margin-bottom:-1px}:focus{outline:3px solid #20b2aa}.filter.selected{background:radial-gradient(#e66465,#9198e5)}.el,.el.visible{display:inline}.el.mark a.c{background:linear-gradient(to right,rgba(255,255,0,.9),rgba(0,0,0,0))}.filtered .el.mark a.c{background:0 0}.hidden{display:none}span.y{margin-right:1em;margin-left:1em;font-size:.8em;font-family:Arial,sans-serif;color:red}body.filtered .y{display:none}
       button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button}button{display:inline-block;border:1px solid;margin-left:-1px;margin-top:-1px;text-decoration:none;font-size:1rem;cursor:pointer;text-align:center;background:0 0;-webkit-appearance:none;-moz-appearance:none}button:focus{border-radius:0}
     </style>
     <title>moev.biz</title>
@@ -16,7 +16,7 @@
       
       
 <div class="filters">
-  <button class="filter selected" data-filter-value="All">All</button><button class="filter" data-filter-value="Organization">Organization</button><button class="filter" data-filter-value="Browser Extension">Browser Extension</button><button class="filter" data-filter-value="Minisite">Minisite</button><button class="filter" data-filter-value="Portfolio">Portfolio</button><button class="filter" data-filter-value="Exhibition Space">Exhibition Space</button><button class="filter" data-filter-value="Blog">Blog</button></div>
+  <button class="filter selected" data-filter-value="All">All</button><button class="filter" data-filter-value="Blog">Blog</button><button class="filter" data-filter-value="Browser Extension">Browser Extension</button><button class="filter" data-filter-value="Exhibition Space">Exhibition Space</button><button class="filter" data-filter-value="Minisite">Minisite</button><button class="filter" data-filter-value="Organization">Organization</button><button class="filter" data-filter-value="Portfolio">Portfolio</button></div>
 
 <br>
   <div class="el" data-type="Organization">
@@ -24,7 +24,7 @@
       <span class="y">2020</span>
     
     <a class="c" href="https://2020.independentspaceindex.at/" target="_blank" noopener noreferrer>
-      Independent Space Index 2020</a>
+      https://2020.independentspaceindex.at/</a>
     <span class="d"> 
       Website for festival program
     </span>
@@ -33,16 +33,16 @@
   <div class="el" data-type="Browser Extension">
     
     <a class="c" href="https://github.com/moevbiz/no-border-radius" target="_blank" noopener noreferrer>
-      no-border-radius</a>
+      https://github.com/moevbiz/no-border-radius</a>
     <span class="d"> 
       Browser extension for internet nostalgics
     </span>
   </div>
   
-  <div class="el" data-type="Organization">
+  <div class="el mark " data-type="Organization">
     
     <a class="c" href="https://chimera.is" target="_blank" noopener noreferrer>
-      Chimera</a>
+      https://chimera.is</a>
     <span class="d"> 
       Representation channel for a transdisciplinary community-based platform
     </span>
@@ -51,16 +51,16 @@
   <div class="el" data-type="Minisite">
     
     <a class="c" href="https://bingo.computer/" target="_blank" noopener noreferrer>
-      bingo.computer</a>
+      https://bingo.computer/</a>
     <span class="d"> 
-      Browser-based bingo
+      Browser bingo
     </span>
   </div>
   
-  <div class="el" data-type="Organization">
+  <div class="el mark " data-type="Organization">
     
     <a class="c" href="https://haus.wien/" target="_blank" noopener noreferrer>
-      Haus</a>
+      https://haus.wien/</a>
     <span class="d"> 
       Website for a collaboratively organized annual exhibition format
     </span>
@@ -69,16 +69,16 @@
   <div class="el" data-type="Portfolio">
     
     <a class="c" href="https://katharinabrandl.at" target="_blank" noopener noreferrer>
-      Katharina Brandl</a>
+      https://katharinabrandl.at</a>
     <span class="d"> 
       Portfolio
     </span>
   </div>
   
-  <div class="el" data-type="Exhibition Space">
+  <div class="el mark " data-type="Exhibition Space">
     
     <a class="c" href="https://cherishhhh.ch" target="_blank" noopener noreferrer>
-      Cherish</a>
+      https://cherishhhh.ch</a>
     <span class="d"> 
       Website for a project space in Geneva
     </span>
@@ -87,7 +87,7 @@
   <div class="el" data-type="Exhibition Space">
     
     <a class="c" href="https://spousevienna.com" target="_blank" noopener noreferrer>
-      Spouse</a>
+      https://spousevienna.com</a>
     <span class="d"> 
       Website for a curatorial project
     </span>
@@ -96,18 +96,18 @@
   <div class="el" data-type="Browser Extension">
     
     <a class="c" href="https://github.com/moevbiz/linkfish" target="_blank" noopener noreferrer>
-      Linkfish</a>
+      https://github.com/moevbiz/linkfish</a>
     <span class="d"> 
       A Google Chrome extension to help organise bookmarks more consciously
     </span>
   </div>
   
-  <div class="el" data-type="Organization">
+  <div class="el mark " data-type="Organization">
     
       <span class="y">2019</span>
     
     <a class="c" href="https://kulturherbst.riotfestival.at" target="_blank" noopener noreferrer>
-      Kulturherbst Neubau</a>
+      https://kulturherbst.riotfestival.at</a>
     <span class="d"> 
       Interactive map for a festival program
     </span>
@@ -116,7 +116,7 @@
   <div class="el" data-type="Blog">
     
     <a class="c" href="https://hugozorn.com" target="_blank" noopener noreferrer>
-      Hugo Zorn</a>
+      https://hugozorn.com</a>
     <span class="d"> 
       Website for an open structured platform for contemporary art
     </span>
@@ -125,7 +125,7 @@
   <div class="el" data-type="Organization">
     
     <a class="c" href="https://independentspaceindex.at/2019" target="_blank" noopener noreferrer>
-      Independent Space Index 2019</a>
+      https://independentspaceindex.at/2019</a>
     <span class="d"> 
       Website for a festival program
     </span>
@@ -134,7 +134,7 @@
   <div class="el" data-type="Portfolio">
     
     <a class="c" href="https://brunomokross.de" target="_blank" noopener noreferrer>
-      Bruno Mokross</a>
+      https://brunomokross.de</a>
     <span class="d"> 
       A personal website
     </span>
@@ -143,7 +143,7 @@
   <div class="el" data-type="Exhibition Space">
     
     <a class="c" href="https://lilyrobert.com" target="_blank" noopener noreferrer>
-      Lily Robert</a>
+      https://lilyrobert.com</a>
     <span class="d"> 
       Website for a gallery in Paris
     </span>
@@ -152,7 +152,7 @@
   <div class="el" data-type="Exhibition Space">
     
     <a class="c" href="https://weloveschool.org" target="_blank" noopener noreferrer>
-      school</a>
+      https://weloveschool.org</a>
     <span class="d"> 
       Website for a project space in Vienna
     </span>
@@ -163,7 +163,7 @@
       <span class="y">2018</span>
     
     <a class="c" href="https://independentspaceindex.at/2018/" target="_blank" noopener noreferrer>
-      Independent Space Index 2018</a>
+      https://independentspaceindex.at/2018/</a>
     <span class="d"> 
       Website for festival program
     </span>
@@ -172,7 +172,7 @@
   <div class="el" data-type="Organization">
     
     <a class="c" href="http://gazebo.rf.gd" target="_blank" noopener noreferrer>
-      Gazebo</a>
+      http://gazebo.rf.gd</a>
     <span class="d"> 
       Website for an exhibition series in public pavilions
     </span>
@@ -181,18 +181,18 @@
   <div class="el" data-type="Portfolio">
     
     <a class="c" href="https://edinzenun.at" target="_blank" noopener noreferrer>
-      Edin Zenun</a>
+      https://edinzenun.at</a>
     <span class="d"> 
       Artist portfolio
     </span>
   </div>
   
-  <div class="el" data-type="Organization">
+  <div class="el mark " data-type="Organization">
     
       <span class="y">2017</span>
     
     <a class="c" href="https://independentspaceindex.at" target="_blank" noopener noreferrer>
-      Independent Space Index</a>
+      https://independentspaceindex.at</a>
     <span class="d"> 
       Website for a networking initiative between independent art spaces in Vienna
     </span>
@@ -201,7 +201,7 @@
   <div class="el" data-type="Exhibition Space">
     
     <a class="c" href="http://kevinspace.org" target="_blank" noopener noreferrer>
-      Kevin Space</a>
+      http://kevinspace.org</a>
     <span class="d"> 
       Website for a project space in Vienna
     </span>
@@ -210,7 +210,7 @@
   <div class="el" data-type="Exhibition Space">
     
     <a class="c" href="https://pinavienna.eu" target="_blank" noopener noreferrer>
-      Pina</a>
+      https://pinavienna.eu</a>
     <span class="d"> 
       Website for a project space in Vienna
     </span>
@@ -220,10 +220,10 @@
     <br>
     <footer class="footer">
       <a class="c" href="https://www.moev.biz">moev.biz</a> 
-      <span class="d e">Web design and development</span>
-      <span class="d e"><a href="tel:+4367761641821">+4367761641821</a></span>
-      <span class="d e"><a href="mailto:xo@moev.biz">xo@moev.biz</a></span>
-      <span class="d e"><a href="https://github.com/moevbiz">github</a></span>
+      <span class="d">Web design and development</span>
+      <span class="d"><a href="tel:+4367761641821">+4367761641821</a></span>
+      <span class="d"><a href="mailto:xo@moev.biz">xo@moev.biz</a></span>
+      <span class="d"><a href="https://github.com/moevbiz">github</a></span>
     </footer>
   </body>
   <script>
