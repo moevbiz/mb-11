@@ -13,30 +13,6 @@
   margin-right: 1em;
 }
 
-[data-tech="JavaScript"]::after {
-  background: radial-gradient(pink, red);
-}
-
-[data-tech="Node"]::after {
-  background: radial-gradient(transparent, purple);
-}
-
-[data-tech="HTML"]::after {
-  background: radial-gradient(rgb(0, 255, 0), green);
-}
-
-[data-tech="CSS"]::after {
-  background: radial-gradient(yellow, goldenrod);
-}
-
-[data-tech="Kirby"]::after {
-  background: radial-gradient(transparent, black);
-}
-
-[data-tech="PHP"]::after {
-  background: radial-gradient(transparent, blue);
-}
-
 html, body {
   height: 100%;
   padding: 0;
@@ -90,6 +66,20 @@ span.d:before {
 
 span.d::after {
   
+}
+
+.tech {
+  display: inline-flex;
+  align-items: center;
+}
+
+.tech span {
+  margin-right: 1rem;
+  font-family: monospace;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  line-height: 1;
+  margin-left: 5px;
 }
 
 .d.e {

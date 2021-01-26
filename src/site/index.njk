@@ -12,6 +12,15 @@ layout: default
 
 <br>
 
+<style>
+  {%- for item in sheet.tech -%}
+  [data-tech="{{ item.name }}"]::after {
+    background: radial-gradient(white 5%, {{ item.color }});
+    border: 1px solid {{ item.color }}
+  }
+  {%- endfor -%}
+</style>
+
 {%- for item in sheet.content -%}
   {% if item.visible === "TRUE" %}
   <div class="el{% if item.mark === 'TRUE' %} mark {% endif %}" data-type="{{ item.type }}">
@@ -28,4 +37,14 @@ layout: default
     {% endfor %}
   </div>
   {% endif %}
+{%- endfor -%}
+
+<br>
+<br>
+
+{%- for item in sheet.tech -%}
+<div class="tech">
+    <i data-tech="{{ item.name }}"></i>
+    <span class="techname">{{ item.name }}</span>
+</div>
 {%- endfor -%}

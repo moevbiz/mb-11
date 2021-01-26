@@ -6,7 +6,7 @@
     
     
     <style>
-      @import url(https://fonts.googleapis.com/css2?family=VT323&display=swap);[data-tech]::after{content:" ";height:.5em;width:.5em;border-radius:50%;display:inline-block;position:relative}[data-tech]:last-child{margin-right:1em}[data-tech=JavaScript]::after{background:radial-gradient(pink,red)}[data-tech=Node]::after{background:radial-gradient(transparent,purple)}[data-tech=HTML]::after{background:radial-gradient(#0f0,green)}[data-tech=CSS]::after{background:radial-gradient(yellow,#daa520)}[data-tech=Kirby]::after{background:radial-gradient(transparent,#000)}[data-tech=PHP]::after{background:radial-gradient(transparent,#00f)}body,html{height:100%;padding:0;margin:0;overflow-x:hidden}body{display:flex;flex-direction:column;font-size:18px;line-height:1.25em;background-color:#fff;padding:12px;box-sizing:border-box}.container{flex:1 0 auto}.footer{flex-shrink:0}a{color:#000;text-decoration:none}a:hover{background:#ff0!important}a.c{display:inline;word-break:break-all;text-decoration:underline}span.d:before{content:" – "}.d.e{margin-right:3px}.filter{font-size:.7em;font-family:sans-serif;text-transform:uppercase;padding:3px 5px;margin-bottom:-1px}:focus{outline:3px solid #20b2aa}.filter.selected{background:radial-gradient(#e66465,#9198e5)}.el,.el.visible{display:inline}.el.mark a.c{background:linear-gradient(to right,rgba(0,255,0,.4),rgba(0,0,0,0))}.filtered .el.mark a.c{background:0 0}.hidden{display:none}span.y{margin-right:1em;margin-left:1em;font-size:.8em;font-family:Arial,sans-serif;color:red}body.filtered .y{display:none}
+      @import url(https://fonts.googleapis.com/css2?family=VT323&display=swap);[data-tech]::after{content:" ";height:.5em;width:.5em;border-radius:50%;display:inline-block;position:relative}[data-tech]:last-child{margin-right:1em}body,html{height:100%;padding:0;margin:0;overflow-x:hidden}body{display:flex;flex-direction:column;font-size:18px;line-height:1.25em;background-color:#fff;padding:12px;box-sizing:border-box}.container{flex:1 0 auto}.footer{flex-shrink:0}a{color:#000;text-decoration:none}a:hover{background:#ff0!important}a.c{display:inline;word-break:break-all;text-decoration:underline}span.d:before{content:" – "}.tech{display:inline-flex;align-items:center}.tech span{margin-right:1rem;font-family:monospace;text-transform:uppercase;font-size:.8rem;line-height:1;margin-left:5px}.d.e{margin-right:3px}.filter{font-size:.7em;font-family:sans-serif;text-transform:uppercase;padding:3px 5px;margin-bottom:-1px}:focus{outline:3px solid #20b2aa}.filter.selected{background:radial-gradient(#e66465,#9198e5)}.el,.el.visible{display:inline}.el.mark a.c{background:linear-gradient(to right,rgba(0,255,0,.4),rgba(0,0,0,0))}.filtered .el.mark a.c{background:0 0}.hidden{display:none}span.y{margin-right:1em;margin-left:1em;font-size:.8em;font-family:Arial,sans-serif;color:red}body.filtered .y{display:none}
       button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button}button{display:inline-block;border:1px solid;margin-left:-1px;margin-top:-1px;text-decoration:none;font-size:1rem;cursor:pointer;text-align:center;background:0 0;-webkit-appearance:none;-moz-appearance:none}button:focus{border-radius:0}
     </style>
     <title>moev.biz</title>
@@ -20,9 +20,79 @@
   <button class="filter selected" data-filter-value="All">All</button><button class="filter" data-filter-value="Blog">Blog</button><button class="filter" data-filter-value="Browser Extension">Browser Extension</button><button class="filter" data-filter-value="Exhibition Archive">Exhibition Archive</button><button class="filter" data-filter-value="Minisite">Minisite</button><button class="filter" data-filter-value="Organization">Organization</button><button class="filter" data-filter-value="Portfolio">Portfolio</button></div>
 
 <br>
+
+<style>[data-tech="JavaScript"]::after {
+    background: radial-gradient(white 5%, red);
+    border: 1px solid red
+  }[data-tech="Node"]::after {
+    background: radial-gradient(white 5%, purple);
+    border: 1px solid purple
+  }[data-tech="HTML"]::after {
+    background: radial-gradient(white 5%, green);
+    border: 1px solid green
+  }[data-tech="CSS"]::after {
+    background: radial-gradient(white 5%, goldenrod);
+    border: 1px solid goldenrod
+  }[data-tech="PHP"]::after {
+    background: radial-gradient(white 5%, blue);
+    border: 1px solid blue
+  }[data-tech="Kirby CMS"]::after {
+    background: radial-gradient(white 5%, black);
+    border: 1px solid black
+  }</style>
+  <div class="el" data-type="Minisite">
+    
+      <span class="y">2021</span>
+    
+    <a class="c" href="https://vodkabrunch.vercel.app/" target="_blank" noopener noreferrer>
+      https://vodkabrunch.vercel.app/</a>
+    <span class="d">
+      Contibutions for my uni department&#39;s annual &quot;Vodka Brunch&quot;
+    </span>
+    
+      <i data-tech="HTML"></i>
+    
+      <i data-tech="CSS"></i>
+    
+      <i data-tech="Node"></i>
+    
+  </div>
+  
+  <div class="el" data-type="Exhibition Archive">
+    
+    <a class="c" href="https://newjoerg.at" target="_blank" noopener noreferrer>
+      https://newjoerg.at</a>
+    <span class="d">
+      Web shop for an artist-run space
+    </span>
+    
+      <i data-tech="HTML"></i>
+    
+      <i data-tech="CSS"></i>
+    
+      <i data-tech="Kirby CMS"></i>
+    
+  </div>
+  
   <div class="el" data-type="Portfolio">
     
       <span class="y">2020</span>
+    
+    <a class="c" href="https://katharina-mokross.com" target="_blank" noopener noreferrer>
+      https://katharina-mokross.com</a>
+    <span class="d">
+      Portfolio
+    </span>
+    
+      <i data-tech="HTML"></i>
+    
+      <i data-tech="CSS"></i>
+    
+      <i data-tech="Kirby CMS"></i>
+    
+  </div>
+  
+  <div class="el" data-type="Portfolio">
     
     <a class="c" href="https://vitalybezpalov.com" target="_blank" noopener noreferrer>
       https://vitalybezpalov.com</a>
@@ -55,7 +125,7 @@
     <a class="c" href="https://github.com/moevbiz/no-border-radius" target="_blank" noopener noreferrer>
       https://github.com/moevbiz/no-border-radius</a>
     <span class="d">
-      Browser extension to make the internet have corners again
+      Browser extension
     </span>
     
       <i data-tech="JavaScript"></i>
@@ -102,7 +172,7 @@
     
       <i data-tech="JavaScript"></i>
     
-      <i data-tech="Kirby"></i>
+      <i data-tech="Kirby CMS"></i>
     
   </div>
   
@@ -118,7 +188,7 @@
     
       <i data-tech="CSS"></i>
     
-      <i data-tech="Kirby"></i>
+      <i data-tech="Kirby CMS"></i>
     
   </div>
   
@@ -150,18 +220,6 @@
     
   </div>
   
-  <div class="el" data-type="Browser Extension">
-    
-    <a class="c" href="https://github.com/moevbiz/linkfish" target="_blank" noopener noreferrer>
-      https://github.com/moevbiz/linkfish</a>
-    <span class="d">
-      A Google Chrome extension to help organise bookmarks more consciously
-    </span>
-    
-      <i data-tech="JavaScript"></i>
-    
-  </div>
-  
   <div class="el mark " data-type="Organization">
     
       <span class="y">2019</span>
@@ -190,7 +248,7 @@
     
       <i data-tech="JavaScript"></i>
     
-      <i data-tech="Kirby"></i>
+      <i data-tech="Kirby CMS"></i>
     
   </div>
   
@@ -236,7 +294,7 @@
     
       <i data-tech="CSS"></i>
     
-      <i data-tech="Kirby"></i>
+      <i data-tech="Kirby CMS"></i>
     
   </div>
   
@@ -270,7 +328,7 @@
     
       <i data-tech="CSS"></i>
     
-      <i data-tech="Kirby"></i>
+      <i data-tech="Kirby CMS"></i>
     
   </div>
   
@@ -298,7 +356,7 @@
     
       <i data-tech="CSS"></i>
     
-      <i data-tech="Kirby"></i>
+      <i data-tech="Kirby CMS"></i>
     
   </div>
   
@@ -316,7 +374,7 @@
     
       <i data-tech="CSS"></i>
     
-      <i data-tech="Kirby"></i>
+      <i data-tech="Kirby CMS"></i>
     
   </div>
   
@@ -347,7 +405,26 @@
       <i data-tech="CSS"></i>
     
   </div>
-  
+  <br>
+<br><div class="tech">
+    <i data-tech="JavaScript"></i>
+    <span class="techname">JavaScript</span>
+</div><div class="tech">
+    <i data-tech="Node"></i>
+    <span class="techname">Node</span>
+</div><div class="tech">
+    <i data-tech="HTML"></i>
+    <span class="techname">HTML</span>
+</div><div class="tech">
+    <i data-tech="CSS"></i>
+    <span class="techname">CSS</span>
+</div><div class="tech">
+    <i data-tech="PHP"></i>
+    <span class="techname">PHP</span>
+</div><div class="tech">
+    <i data-tech="Kirby CMS"></i>
+    <span class="techname">Kirby CMS</span>
+</div>
     </div>
     <br>
     <footer class="footer">
