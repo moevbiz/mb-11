@@ -1,7 +1,20 @@
-let filters = document.querySelectorAll('.filter')
-let elements = document.querySelectorAll('.el')
+let filters = document.querySelectorAll('.filter');
+let elements = document.querySelectorAll('.el');
+const frame = document.querySelector('#frame');
+const links = document.querySelectorAll('.container a.c');
+const closeBtn = document.querySelector('#close-frame');
 
-function toggle(input) {
+function openIframe(link) {
+    show(frame);
+    frame.src = link;
+}
+
+function closeIframe() {
+    frame.src = '';
+    hide(frame);
+}
+
+function toggleInput(input) {
     if (input != "All") {
         document.body.classList.add('filtered')
     } else {
@@ -37,6 +50,20 @@ function hide(el) {
 
 filters.forEach((filter) => {
     filter.addEventListener('click', function(e) {
-        toggle(filter.dataset.filterValue)
+        toggleInput(filter.dataset.filterValue)
     })
+})
+
+links.forEach(link => {
+    link.addEventListener('click', e => {
+        e.preventDefault();
+        openIframe(e.target.href);
+    })
+})
+
+document.body.addEventListener('click', (e) => {
+    if (e.target === frame || e.target.classList.contains('c')) return;
+    if (frame.classList.contains('visible')) {
+        closeIframe(frame);
+    };
 })
