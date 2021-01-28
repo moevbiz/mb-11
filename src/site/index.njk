@@ -23,7 +23,8 @@ layout: default
 
 {%- for item in sheet.content -%}
   {% if item.visible === "TRUE" %}
-  <div class="el{% if item.mark === 'TRUE' %} mark {% endif %}" data-type="{{ item.type }}">
+  <div class="el{% if item.mark === 'TRUE' %} mark {% endif %}" 
+  data-type="{{ item.type }}">
     {% if item.yearDisplay == true %}
       <span class="y">{{ item.year }}</span>
     {% endif %}

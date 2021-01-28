@@ -54,16 +54,18 @@ module.exports = () => {
             "year": item.gsx$year.$t,
             "name": item.gsx$name.$t,
             "link": item.gsx$url.$t,
-            "type": item.gsx$type.$t,
+            "type": item.gsx$type.$t.split(', '),
             "tech": item.gsx$tech.$t.split(', '),
             "long": item.gsx$long.$t,
             "mark": item.gsx$highlight.$t,
             "visible": item.gsx$visible.$t,
             "yearDisplay": yearDisplay(item)
           })
-          if (!data.types.includes(item.gsx$type.$t)) {
-            data.types.push(item.gsx$type.$t)
-          }
+          item.gsx$type.$t.split(', ').forEach(type => {
+            if (!data.types.includes(item.gsx$type.$t)) {
+              data.types.push(type);
+            }
+          })
         });
 
         data.types.sort()

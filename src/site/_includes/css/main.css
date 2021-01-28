@@ -91,7 +91,7 @@ span.d::after {
   font-family: sans-serif;
   text-transform: uppercase;
   padding: 3px 5px;
-  margin-bottom: -1px;
+  margin-bottom: 5px;
 }
 
 *:focus {

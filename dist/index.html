@@ -6,7 +6,7 @@
     
     
     <style>
-      @import url(https://fonts.googleapis.com/css2?family=VT323&display=swap);[data-tech]::after{content:" ";height:.5em;width:.5em;border-radius:50%;display:inline-block;position:relative}[data-tech]:last-child{margin-right:1em}body,html{height:100%;padding:0;margin:0;overflow-x:hidden}body{display:flex;flex-direction:column;font-size:18px;line-height:1.25em;background-color:#fff;padding:12px;box-sizing:border-box}.container{flex:1 0 auto}.footer{flex-shrink:0}a{color:#000;text-decoration:none}a:hover{background:#ff0!important}a.c{display:inline;word-break:break-all;text-decoration:underline}span.d:before{content:" – "}.tech{display:inline-flex;align-items:center}.tech span{margin-right:1rem;font-family:monospace;text-transform:uppercase;font-size:.8rem;line-height:1;margin-left:5px}.d.e{margin-right:3px}.filter{font-size:.7em;font-family:sans-serif;text-transform:uppercase;padding:3px 5px;margin-bottom:-1px}:focus{outline:3px solid #20b2aa}.filter.selected{background:radial-gradient(#e66465,#9198e5)}.el,.el.visible{display:inline}.el.mark a.c{background:linear-gradient(to right,rgba(0,255,0,.4),rgba(0,0,0,0))}.filtered .el.mark a.c{background:0 0}.hidden{display:none}span.y{margin-right:1em;margin-left:1em;font-size:.8em;font-family:Arial,sans-serif;color:red}body.filtered .y{display:none}
+      @import url(https://fonts.googleapis.com/css2?family=VT323&display=swap);[data-tech]::after{content:" ";height:.5em;width:.5em;border-radius:50%;display:inline-block;position:relative}[data-tech]:last-child{margin-right:1em}body,html{height:100%;padding:0;margin:0;overflow-x:hidden}body{display:flex;flex-direction:column;font-size:18px;line-height:1.25em;background-color:#fff;padding:12px;box-sizing:border-box}.container{flex:1 0 auto}.footer{flex-shrink:0}a{color:#000;text-decoration:none}a:hover{background:#ff0!important}a.c{display:inline;word-break:break-all;text-decoration:underline}span.d:before{content:" – "}.tech{display:inline-flex;align-items:center}.tech span{margin-right:1rem;font-family:monospace;text-transform:uppercase;font-size:.8rem;line-height:1;margin-left:5px}.d.e{margin-right:3px}.filter{font-size:.7em;font-family:sans-serif;text-transform:uppercase;padding:3px 5px;margin-bottom:5px}:focus{outline:3px solid #20b2aa}.filter.selected{background:radial-gradient(#e66465,#9198e5)}.el,.el.visible{display:inline}.el.mark a.c{background:linear-gradient(to right,rgba(0,255,0,.4),rgba(0,0,0,0))}.filtered .el.mark a.c{background:0 0}.hidden{display:none}span.y{margin-right:1em;margin-left:1em;font-size:.8em;font-family:Arial,sans-serif;color:red}body.filtered .y{display:none}
       button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button}button{display:inline-block;border:1px solid;margin-left:-1px;margin-top:-1px;text-decoration:none;font-size:1rem;cursor:pointer;text-align:center;background:0 0;-webkit-appearance:none;-moz-appearance:none}button:focus{border-radius:0}
     </style>
     <title>moev.biz</title>
@@ -17,7 +17,7 @@
       
       
 <div class="filters">
-  <button class="filter selected" data-filter-value="All">All</button><button class="filter" data-filter-value="Blog">Blog</button><button class="filter" data-filter-value="Browser Extension">Browser Extension</button><button class="filter" data-filter-value="Exhibition Archive">Exhibition Archive</button><button class="filter" data-filter-value="Minisite">Minisite</button><button class="filter" data-filter-value="Organization">Organization</button><button class="filter" data-filter-value="Portfolio">Portfolio</button></div>
+  <button class="filter selected" data-filter-value="All">All</button><button class="filter" data-filter-value="Blog">Blog</button><button class="filter" data-filter-value="Browser Extension">Browser Extension</button><button class="filter" data-filter-value="Exhibition Archive">Exhibition Archive</button><button class="filter" data-filter-value="Minisite">Minisite</button><button class="filter" data-filter-value="Organization">Organization</button><button class="filter" data-filter-value="Portfolio">Portfolio</button><button class="filter" data-filter-value="Web shop">Web shop</button></div>
 
 <br>
 
@@ -40,7 +40,8 @@
     background: radial-gradient(white 5%, black);
     border: 1px solid black
   }</style>
-  <div class="el" data-type="Minisite">
+  <div class="el" 
+  data-type="Minisite">
     
       <span class="y">2021</span>
     
@@ -58,7 +59,8 @@
     
   </div>
   
-  <div class="el" data-type="Exhibition Archive">
+  <div class="el" 
+  data-type="Exhibition Archive,Web shop">
     
     <a class="c" href="https://newjoerg.at" target="_blank" noopener noreferrer>
       https://newjoerg.at</a>
@@ -74,7 +76,8 @@
     
   </div>
   
-  <div class="el" data-type="Portfolio">
+  <div class="el" 
+  data-type="Portfolio">
     
       <span class="y">2020</span>
     
@@ -92,7 +95,8 @@
     
   </div>
   
-  <div class="el" data-type="Portfolio">
+  <div class="el" 
+  data-type="Portfolio">
     
     <a class="c" href="https://vitalybezpalov.com" target="_blank" noopener noreferrer>
       https://vitalybezpalov.com</a>
@@ -108,7 +112,8 @@
     
   </div>
   
-  <div class="el" data-type="Organization">
+  <div class="el" 
+  data-type="Organization">
     
     <a class="c" href="https://2020.independentspaceindex.at/" target="_blank" noopener noreferrer>
       https://2020.independentspaceindex.at/</a>
@@ -120,7 +125,8 @@
     
   </div>
   
-  <div class="el" data-type="Browser Extension">
+  <div class="el" 
+  data-type="Browser Extension">
     
     <a class="c" href="https://github.com/moevbiz/no-border-radius" target="_blank" noopener noreferrer>
       https://github.com/moevbiz/no-border-radius</a>
@@ -132,7 +138,8 @@
     
   </div>
   
-  <div class="el" data-type="Organization">
+  <div class="el" 
+  data-type="Organization">
     
     <a class="c" href="https://chimera.is" target="_blank" noopener noreferrer>
       https://chimera.is</a>
@@ -146,7 +153,8 @@
     
   </div>
   
-  <div class="el" data-type="Minisite">
+  <div class="el" 
+  data-type="Minisite">
     
     <a class="c" href="https://bingo.computer/" target="_blank" noopener noreferrer>
       https://bingo.computer/</a>
@@ -158,7 +166,8 @@
     
   </div>
   
-  <div class="el mark " data-type="Organization">
+  <div class="el mark " 
+  data-type="Organization">
     
     <a class="c" href="https://haus.wien/" target="_blank" noopener noreferrer>
       https://haus.wien/</a>
@@ -176,7 +185,8 @@
     
   </div>
   
-  <div class="el" data-type="Portfolio">
+  <div class="el" 
+  data-type="Portfolio">
     
     <a class="c" href="https://katharinabrandl.at" target="_blank" noopener noreferrer>
       https://katharinabrandl.at</a>
@@ -192,7 +202,8 @@
     
   </div>
   
-  <div class="el" data-type="Exhibition Archive">
+  <div class="el" 
+  data-type="Exhibition Archive">
     
     <a class="c" href="https://cherishhhh.ch" target="_blank" noopener noreferrer>
       https://cherishhhh.ch</a>
@@ -206,7 +217,8 @@
     
   </div>
   
-  <div class="el" data-type="Exhibition Archive">
+  <div class="el" 
+  data-type="Exhibition Archive">
     
     <a class="c" href="https://spousevienna.com" target="_blank" noopener noreferrer>
       https://spousevienna.com</a>
@@ -220,7 +232,8 @@
     
   </div>
   
-  <div class="el mark " data-type="Organization">
+  <div class="el mark " 
+  data-type="Organization">
     
       <span class="y">2019</span>
     
@@ -234,7 +247,8 @@
     
   </div>
   
-  <div class="el" data-type="Blog">
+  <div class="el" 
+  data-type="Blog">
     
     <a class="c" href="https://hugozorn.com" target="_blank" noopener noreferrer>
       https://hugozorn.com</a>
@@ -252,7 +266,8 @@
     
   </div>
   
-  <div class="el" data-type="Organization">
+  <div class="el" 
+  data-type="Organization">
     
     <a class="c" href="https://independentspaceindex.at/2019" target="_blank" noopener noreferrer>
       https://independentspaceindex.at/2019</a>
@@ -268,7 +283,8 @@
     
   </div>
   
-  <div class="el" data-type="Portfolio">
+  <div class="el" 
+  data-type="Portfolio">
     
     <a class="c" href="https://brunomokross.de" target="_blank" noopener noreferrer>
       https://brunomokross.de</a>
@@ -282,7 +298,8 @@
     
   </div>
   
-  <div class="el" data-type="Exhibition Archive">
+  <div class="el" 
+  data-type="Exhibition Archive">
     
     <a class="c" href="https://lilyrobert.com" target="_blank" noopener noreferrer>
       https://lilyrobert.com</a>
@@ -298,7 +315,8 @@
     
   </div>
   
-  <div class="el" data-type="Exhibition Archive">
+  <div class="el" 
+  data-type="Exhibition Archive">
     
     <a class="c" href="https://weloveschool.org" target="_blank" noopener noreferrer>
       https://weloveschool.org</a>
@@ -314,7 +332,8 @@
     
   </div>
   
-  <div class="el" data-type="Organization">
+  <div class="el" 
+  data-type="Organization">
     
       <span class="y">2018</span>
     
@@ -332,7 +351,8 @@
     
   </div>
   
-  <div class="el" data-type="Organization">
+  <div class="el" 
+  data-type="Organization">
     
     <a class="c" href="https://gazebo.site" target="_blank" noopener noreferrer>
       https://gazebo.site</a>
@@ -344,7 +364,8 @@
     
   </div>
   
-  <div class="el" data-type="Portfolio">
+  <div class="el" 
+  data-type="Portfolio">
     
     <a class="c" href="https://edinzenun.at" target="_blank" noopener noreferrer>
       https://edinzenun.at</a>
@@ -360,7 +381,8 @@
     
   </div>
   
-  <div class="el mark " data-type="Organization">
+  <div class="el mark " 
+  data-type="Organization">
     
       <span class="y">2017</span>
     
@@ -378,7 +400,8 @@
     
   </div>
   
-  <div class="el" data-type="Exhibition Archive">
+  <div class="el" 
+  data-type="Exhibition Archive">
     
     <a class="c" href="http://kevinspace.org" target="_blank" noopener noreferrer>
       http://kevinspace.org</a>
@@ -392,7 +415,8 @@
     
   </div>
   
-  <div class="el" data-type="Exhibition Archive">
+  <div class="el" 
+  data-type="Exhibition Archive">
     
     <a class="c" href="https://pinavienna.eu" target="_blank" noopener noreferrer>
       https://pinavienna.eu</a>
@@ -455,7 +479,7 @@ function toggle(input) {
     elements.forEach((element) => {
         if (input === "All") {
             show(element)
-        } else if (element.dataset.type == input) {
+        } else if (element.dataset.type.split(',').includes(input)) {
             show(element)
         } else {
             hide(element)

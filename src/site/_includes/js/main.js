@@ -17,7 +17,7 @@ function toggle(input) {
     elements.forEach((element) => {
         if (input === "All") {
             show(element)
-        } else if (element.dataset.type == input) {
+        } else if (element.dataset.type.split(',').includes(input)) {
             show(element)
         } else {
             hide(element)
