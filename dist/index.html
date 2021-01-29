@@ -6,7 +6,7 @@
     
     
     <style>
-      @import url(https://fonts.googleapis.com/css2?family=VT323&display=swap);[data-tech]::after{content:" ";height:.5em;width:.5em;border-radius:50%;display:inline-block;position:relative}[data-tech]:last-child{margin-right:1em}body,html{height:100%;padding:0;margin:0;overflow-x:hidden}body{display:flex;flex-direction:column;font-size:18px;line-height:1.25em;background-color:#fff;padding:12px;box-sizing:border-box}.container{flex:1 0 auto}.footer{flex-shrink:0}a{color:#000;text-decoration:none}a:hover{background:#ff0!important}a.c{display:inline;word-break:break-all;text-decoration:underline}span.d:before{content:" – "}.tech{display:inline-flex;align-items:center}.tech span{margin-right:1rem;font-family:monospace;text-transform:uppercase;font-size:.8rem;line-height:1;margin-left:5px}.d.e{margin-right:3px}.filter{font-size:.7em;font-family:sans-serif;text-transform:uppercase;padding:3px 5px;margin-bottom:5px}:focus{outline:3px solid #20b2aa}.filter.selected{background:radial-gradient(#e66465,#9198e5)}.el,.el.visible{display:inline}.el.mark a.c{background:linear-gradient(to right,rgba(0,255,0,.4),rgba(0,0,0,0))}.filtered .el.mark a.c{background:0 0}.hidden{display:none}span.y{margin-right:1em;margin-left:1em;font-size:.8em;font-family:Arial,sans-serif;color:red}body.filtered .y{display:none}#frame{position:fixed;top:0;left:0;width:100%;height:100%;background:#fff;box-shadow:1px 1px 25px rgba(0,0,0,.1);border-radius:3px;border:none;opacity:0;transform:scale(.65);transition:all .1s linear}#frame.hidden{pointer-events:none}#frame.visible{opacity:1;pointer-events:all;transform:scale(.75)}#close-frame{transform:scale(1.25);transform-origin:top left}
+      @import url(https://fonts.googleapis.com/css2?family=VT323&display=swap);[data-tech]::after{content:" ";height:.5em;width:.5em;border-radius:50%;display:inline-block;position:relative}[data-tech]:last-child{margin-right:1em}body,html{height:100%;padding:0;margin:0;overflow-x:hidden}body{display:flex;flex-direction:column;font-size:18px;line-height:1.25em;background-color:#fff;padding:12px;box-sizing:border-box}.container{flex:1 0 auto}.footer{flex-shrink:0}a{color:#000;text-decoration:none}a:hover{background:#ff0!important}a.c{display:inline;word-break:break-all;text-decoration:underline}span.d:before{content:" – "}.tech{display:inline-flex;align-items:center}.tech span{margin-right:1rem;font-family:monospace;text-transform:uppercase;font-size:.8rem;line-height:1;margin-left:5px}.d.e{margin-right:3px}.filter{font-size:.7em;font-family:sans-serif;text-transform:uppercase;padding:3px 5px;margin-bottom:5px}:focus{outline:3px solid #20b2aa}.filter.selected{background:radial-gradient(#e66465,#9198e5)}.el,.el.visible{display:inline}.el.mark a.c{background:linear-gradient(to right,rgba(0,255,0,.4),rgba(0,0,0,0))}.filtered .el.mark a.c{background:0 0}.hidden:not(#frame-wrapper){display:none}span.y{margin-right:1em;margin-left:1em;font-size:.8em;font-family:Arial,sans-serif;color:red}body.filtered .y{display:none}#frame-wrapper{position:fixed;top:0;left:0;width:100%;height:100%;background-color:rgba(255,255,255,.5);backdrop-filter:blur(0);-webkit-backdrop-filter:blur(0);opacity:0;pointer-events:none;transition:all .05s linear}#frame-wrapper.visible{opacity:1;pointer-events:all;backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px)}#frame{position:fixed;top:0;left:0;width:100%;height:100%;background:#fff;box-shadow:1px 1px 25px rgba(0,0,0,.1);border-radius:3px;border:none;transform:scale(.75);transition:all .1s linear}#frame-wrapper.hidden #frame{transform:scale(.65)}#close-frame{transform:scale(1.25);transform-origin:top left}
       button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button}button{display:inline-block;border:1px solid;margin-left:-1px;margin-top:-1px;text-decoration:none;font-size:1rem;cursor:pointer;text-align:center;background:0 0;-webkit-appearance:none;-moz-appearance:none}button:focus{border-radius:0}
     </style>
     <title>moev.biz</title>
@@ -448,7 +448,9 @@
 </div><div class="tech">
     <i data-tech="Kirby CMS"></i>
     <span class="techname">Kirby CMS</span>
-</div><iframe id="frame" class="hidden"></iframe>
+</div><div id="frame-wrapper" class="hidden">
+  <iframe id="frame"></iframe>
+</div>
     </div>
     <br>
     <footer class="footer">
@@ -467,13 +469,14 @@ const links = document.querySelectorAll('.container a.c');
 const closeBtn = document.querySelector('#close-frame');
 
 function openIframe(link) {
-    show(frame);
+    show(frame.parentElement);
     frame.src = link;
 }
 
 function closeIframe() {
     frame.src = '';
-    hide(frame);
+    hide(frame.parentElement);
+    frame.classList.remove('loaded');
 }
 
 function toggleInput(input) {
@@ -523,11 +526,16 @@ links.forEach(link => {
     })
 })
 
-document.body.addEventListener('click', (e) => {
+frame.parentElement.addEventListener('click', (e) => {
     if (e.target === frame || e.target.classList.contains('c')) return;
-    if (frame.classList.contains('visible')) {
+    if (frame.parentElement.classList.contains('visible')) {
         closeIframe(frame);
     };
+})
+
+frame.addEventListener('load', () => {
+    if (frame.parentElement.classList.contains('hidden')) return;
+    frame.classList.add('loaded');
 })
   </script>
 </html>

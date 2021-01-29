@@ -5,13 +5,14 @@ const links = document.querySelectorAll('.container a.c');
 const closeBtn = document.querySelector('#close-frame');
 
 function openIframe(link) {
-    show(frame);
+    show(frame.parentElement);
     frame.src = link;
 }
 
 function closeIframe() {
     frame.src = '';
-    hide(frame);
+    hide(frame.parentElement);
+    frame.classList.remove('loaded');
 }
 
 function toggleInput(input) {
@@ -61,9 +62,14 @@ links.forEach(link => {
     })
 })
 
-document.body.addEventListener('click', (e) => {
+frame.parentElement.addEventListener('click', (e) => {
     if (e.target === frame || e.target.classList.contains('c')) return;
-    if (frame.classList.contains('visible')) {
+    if (frame.parentElement.classList.contains('visible')) {
         closeIframe(frame);
     };
+})
+
+frame.addEventListener('load', () => {
+    if (frame.parentElement.classList.contains('hidden')) return;
+    frame.classList.add('loaded');
 })

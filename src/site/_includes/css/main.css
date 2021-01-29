@@ -115,7 +115,7 @@ span.d::after {
     background: transparent;
   }
 
-.hidden {
+.hidden:not(#frame-wrapper) {
   display: none;
 }
 
@@ -131,6 +131,28 @@ body.filtered .y {
   display: none;
 }
 
+#frame-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255,255,255,0.5);
+  backdrop-filter: blur(0); 
+  -webkit-backdrop-filter: blur(0);
+
+  opacity: 0;
+  pointer-events: none;
+  transition: all .05s linear;
+}
+
+#frame-wrapper.visible {
+  opacity: 1;
+  pointer-events: all;
+  backdrop-filter: blur(4px); 
+  -webkit-backdrop-filter: blur(4px);
+}
+
 #frame {
   position: fixed;
   top: 0;
@@ -141,21 +163,13 @@ body.filtered .y {
   box-shadow: 1px 1px 25px rgba(0,0,0,0.1);
   border-radius: 3px;
   border: none;
-
-  opacity: 0;
-  transform: scale(.65);
+  transform: scale(.75);
 
   transition: all .1s linear;
 }
 
-#frame.hidden {
-  pointer-events: none;
-}
-
-#frame.visible {
-  opacity: 1;
-  pointer-events: all;
-  transform: scale(.75);
+#frame-wrapper.hidden #frame {
+  transform: scale(.65);
 }
 
 #close-frame {
