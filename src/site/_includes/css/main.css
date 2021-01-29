@@ -176,3 +176,12 @@ body.filtered .y {
   transform: scale(1.25);
   transform-origin: top left;
 }
+
+#framelink {
+  position: fixed;
+  top: 0;
+  right: 0;
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+  padding: 10px;
+}

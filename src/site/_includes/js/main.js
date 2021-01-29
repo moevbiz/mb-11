@@ -1,16 +1,19 @@
 let filters = document.querySelectorAll('.filter');
 let elements = document.querySelectorAll('.el');
 const frame = document.querySelector('#frame');
+const frameLink = document.querySelector('#framelink');
 const links = document.querySelectorAll('.container a.c');
 const closeBtn = document.querySelector('#close-frame');
 
 function openIframe(link) {
     show(frame.parentElement);
     frame.src = link;
+    frameLink.href = link;
 }
 
 function closeIframe() {
     frame.src = '';
+    frameLink.href = '';
     hide(frame.parentElement);
     frame.classList.remove('loaded');
 }
@@ -63,7 +66,7 @@ links.forEach(link => {
 })
 
 frame.parentElement.addEventListener('click', (e) => {
-    if (e.target === frame || e.target.classList.contains('c')) return;
+    if (e.target === frame || e.target === frameLink || e.target.classList.contains('c')) return;
     if (frame.parentElement.classList.contains('visible')) {
         closeIframe(frame);
     };
