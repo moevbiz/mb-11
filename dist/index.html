@@ -17,22 +17,22 @@
       
       
 <div class="filters">
-  <button class="filter selected" data-filter-value="All">All</button><button class="filter" data-filter-value="Blog">Blog</button><button class="filter" data-filter-value="Browser Extension">Browser Extension</button><button class="filter" data-filter-value="Exhibition Archive">Exhibition Archive</button><button class="filter" data-filter-value="Minisite">Minisite</button><button class="filter" data-filter-value="Organization">Organization</button><button class="filter" data-filter-value="Portfolio">Portfolio</button><button class="filter" data-filter-value="Web shop">Web shop</button></div>
+  <button class="filter selected" data-filter-value="All">All</button><button class="filter" data-filter-value="Browser Extension">Browser Extension</button><button class="filter" data-filter-value="Exhibition Archive">Exhibition Archive</button><button class="filter" data-filter-value="Magazine">Magazine</button><button class="filter" data-filter-value="Minisite">Minisite</button><button class="filter" data-filter-value="Organization">Organization</button><button class="filter" data-filter-value="Portfolio">Portfolio</button><button class="filter" data-filter-value="Web shop">Web shop</button></div>
 
 <br>
 
-<style>[data-tech="JavaScript"]::after {
-    background: radial-gradient(white 5%, red);
-    border: 1px solid red
-  }[data-tech="Node"]::after {
-    background: radial-gradient(white 5%, purple);
-    border: 1px solid purple
-  }[data-tech="HTML"]::after {
+<style>[data-tech="HTML"]::after {
     background: radial-gradient(white 5%, green);
     border: 1px solid green
   }[data-tech="CSS"]::after {
     background: radial-gradient(white 5%, goldenrod);
     border: 1px solid goldenrod
+  }[data-tech="JavaScript"]::after {
+    background: radial-gradient(white 5%, red);
+    border: 1px solid red
+  }[data-tech="Node"]::after {
+    background: radial-gradient(white 5%, purple);
+    border: 1px solid purple
   }[data-tech="PHP"]::after {
     background: radial-gradient(white 5%, blue);
     border: 1px solid blue
@@ -40,10 +40,29 @@
     background: radial-gradient(white 5%, black);
     border: 1px solid black
   }</style>
-  <div class="el" 
-  data-type="Minisite">
+  <div class="el mark " 
+  data-type="Magazine">
     
       <span class="y">2021</span>
+    
+    <a class="c" href="https://period.at" target="_blank" noopener noreferrer>
+      https://period.at</a>
+    <span class="d">
+      Quarterly online magazine for sustainability, equality and innovation
+    </span>
+    
+      <i data-tech="HTML"></i>
+    
+      <i data-tech="CSS"></i>
+    
+      <i data-tech="JavaScript"></i>
+    
+      <i data-tech="Kirby CMS"></i>
+    
+  </div>
+  
+  <div class="el" 
+  data-type="Minisite">
     
     <a class="c" href="https://vodkabrunch.vercel.app/" target="_blank" noopener noreferrer>
       https://vodkabrunch.vercel.app/</a>
@@ -248,7 +267,7 @@
   </div>
   
   <div class="el" 
-  data-type="Blog">
+  data-type="Magazine">
     
     <a class="c" href="https://hugozorn.com" target="_blank" noopener noreferrer>
       https://hugozorn.com</a>
@@ -431,17 +450,17 @@
   </div>
   <br>
 <br><div class="tech">
-    <i data-tech="JavaScript"></i>
-    <span class="techname">JavaScript</span>
-</div><div class="tech">
-    <i data-tech="Node"></i>
-    <span class="techname">Node</span>
-</div><div class="tech">
     <i data-tech="HTML"></i>
     <span class="techname">HTML</span>
 </div><div class="tech">
     <i data-tech="CSS"></i>
     <span class="techname">CSS</span>
+</div><div class="tech">
+    <i data-tech="JavaScript"></i>
+    <span class="techname">JavaScript</span>
+</div><div class="tech">
+    <i data-tech="Node"></i>
+    <span class="techname">Node</span>
 </div><div class="tech">
     <i data-tech="PHP"></i>
     <span class="techname">PHP</span>
@@ -456,9 +475,10 @@
     <footer class="footer">
       <a class="c" href="https://moev.biz">https://moev.biz</a> 
       <span class="d">Web design and development</span>
-      <span class="d"><a href="tel:+4367761641821">tel:+4367761641821</a></span>
-      <span class="d"><a href="mailto:moev.biz@moev.biz">mailto:moev.biz@moev.biz</a></span>
-      <span class="d"><a href="https://github.com/moevbiz">github</a></span>
+      <span class="d"><a href="tel:+4367761641821" style="text-decoration: underline">tel:+4367761641821</a></span>
+      <span class="d"><a href="mailto:moev.biz@moev.biz" style="text-decoration: underline">mailto:moev.biz@moev.biz</a></span>
+      <span class="d"><a href="https://github.com/moevbiz" style="text-decoration: underline">https://github.com/moevbiz</a></span>
+      <span class="d">updated: 1/29/2021, 1:32:33 PM</span>
     </footer>
   </body>
   <script>

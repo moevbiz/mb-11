@@ -30,6 +30,7 @@ module.exports = () => {
           "content": [],
           "types": [],
           "tech": [],
+          "date": new Date('Y'),
         };
         let years = [];
         tech.data.feed.entry.forEach(item => {
