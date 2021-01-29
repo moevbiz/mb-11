@@ -164,12 +164,14 @@ body.filtered .y {
   border-radius: 3px;
   border: none;
   transform: scale(.75);
+  pointer-events: all;
 
   transition: all .1s linear;
 }
 
 #frame-wrapper.hidden #frame {
   transform: scale(.65);
+  pointer-events: none;
 }
 
 #close-frame {
