@@ -63,7 +63,7 @@ module.exports = () => {
             "yearDisplay": yearDisplay(item)
           })
           item.gsx$type.$t.split(', ').forEach(type => {
-            if (!data.types.includes(item.gsx$type.$t)) {
+            if (!data.types.includes(type)) {
               data.types.push(type);
             }
           })
