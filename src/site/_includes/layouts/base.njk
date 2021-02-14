@@ -31,9 +31,12 @@
       <span class="d">updated: {{ currentDate() }}</span>
     </footer>
   </body>
-  <script>
-    {% include "js/main.js" %}
-  </script>
+    {% set js %}
+      {% include "js/main.js" %}
+    {% endset %}
+    <script>
+      {{ js | jsmin | safe }}
+    </script>
 </html>
 
 

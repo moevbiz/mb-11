@@ -1,10 +1,6 @@
 const axios  = require('axios');
 const seed   = require('../../../utils/save-seed.js');
 
-
-// Once a google sheet is "published to the web" we can access its JSON
-// via a URL of this form. We just need to pass in the ID of the sheet
-// which we can find in the URL of the document.
 const sheetID = "1XN9AyaFrvrVdw53PUFvCFSBElc0u35Eb4ZHnncdS91w";
 const sheet = {
   sites: `https://spreadsheets.google.com/feeds/list/${sheetID}/1/public/values?alt=json`,
@@ -17,6 +13,18 @@ const getSites = () => {
 
 const getTech = () => {
   return axios.get(sheet.tech);
+}
+
+const yearDisplay = (item, years) => {
+  if (years.includes(item.gsx$year.$t)) {
+    return false
+  } else {
+    if (item.gsx$visible.$t === "TRUE") {
+      years.push(item.gsx$year.$t)
+      return true
+    }
+    return false
+  }
 }
 
 module.exports = () => {
@@ -40,17 +48,6 @@ module.exports = () => {
           });
         })
         sites.data.feed.entry.forEach(item => {
-          function yearDisplay(item) {
-            if (years.includes(item.gsx$year.$t)) {
-              return false
-            } else {
-              if (item.gsx$visible.$t === "TRUE") {
-                years.push(item.gsx$year.$t)
-                return true
-              }
-              return false
-            }
-          }
           data.content.push({
             "year": item.gsx$year.$t,
             "name": item.gsx$name.$t,
@@ -58,9 +55,9 @@ module.exports = () => {
             "type": item.gsx$type.$t.split(', '),
             "tech": item.gsx$tech.$t.split(', '),
             "long": item.gsx$long.$t,
-            "mark": item.gsx$highlight.$t,
-            "visible": item.gsx$visible.$t,
-            "yearDisplay": yearDisplay(item)
+            "mark": JSON.parse(item.gsx$highlight.$t.toLowerCase()),
+            "visible": JSON.parse(item.gsx$visible.$t.toLowerCase()),
+            "yearDisplay": yearDisplay(item, years)
           })
           item.gsx$type.$t.split(', ').forEach(type => {
             if (!data.types.includes(type)) {
@@ -73,7 +70,7 @@ module.exports = () => {
 
         // stash the data locally for developing without
         // needing to hit the API each time.
-        seed(JSON.stringify(data), `${__dirname}/../dev/sheet.json`);
+        seed(JSON.stringify(data, null, 4), `${__dirname}/../dev/sheet.json`);
 
         // resolve the promise and return the data
         resolve(data);

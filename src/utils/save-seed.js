@@ -4,7 +4,7 @@
 const fs = require("fs");
 
 module.exports = (data, path) => {
-  if(process.env.ELEVENTY_ENV == 'seed') {
+  if(['seed'].includes(process.env.ELEVENTY_ENV)) {
     fs.writeFile(path, data, err => {
       if(err) {
         console.log(err);
