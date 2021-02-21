@@ -59,11 +59,13 @@ module.exports = () => {
             "visible": JSON.parse(item.gsx$visible.$t.toLowerCase()),
             "yearDisplay": yearDisplay(item, years)
           })
-          item.gsx$type.$t.split(', ').forEach(type => {
-            if (!data.types.includes(type)) {
-              data.types.push(type);
-            }
-          })
+          if (JSON.parse(item.gsx$visible.$t.toLowerCase())) {
+            item.gsx$type.$t.split(', ').forEach(type => {
+              if (!data.types.includes(type)) {
+                data.types.push(type);
+              }
+            })
+          }
         });
 
         data.types.sort()

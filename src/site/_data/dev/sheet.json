@@ -2,7 +2,7 @@
     "content": [
         {
             "year": "2021",
-            "name": "Entkustung",
+            "name": "Entkunstung",
             "link": "https://entkunstung.com/",
             "type": [
                 "Magazine",
@@ -131,7 +131,7 @@
             ],
             "long": "Browser extension",
             "mark": false,
-            "visible": true,
+            "visible": false,
             "yearDisplay": false
         },
         {
@@ -447,7 +447,6 @@
         }
     ],
     "types": [
-        "Browser Extension",
         "Exhibition Archive",
         "Magazine",
         "Minisite",
