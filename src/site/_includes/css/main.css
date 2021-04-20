@@ -104,7 +104,10 @@ span.d::after {
 
 .el,
 .el.visible {
-  display: inline;
+  display: block;
+  border-bottom: 1px solid gray;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
 }
 
 .el.mark a.c {
@@ -120,11 +123,13 @@ span.d::after {
 }
 
 span.y {
+  display: block;
   margin-right: 1em;
   margin-left: 1em;
   font-size: .8em;
   font-family: "Arial", sans-serif;
   color: red;
+  margin: 2rem 0;
 }
 
 body.filtered .y {
