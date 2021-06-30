@@ -60,6 +60,9 @@ filters.forEach((filter) => {
 
 links.forEach(link => {
     link.addEventListener('click', e => {
+        // open link in new tab if command key is pressed
+        if (e.metaKey) return;
+        // else open link in iframe
         e.preventDefault();
         openIframe(e.target.href);
     })
